@@ -37,8 +37,12 @@ const getCard=()=>{
    return cardObj;
 }
 const  addProductsCard=name=>{
-   const card =getCard();
-   card[name]=1;
+   let card =getCard();
+   if(card[name]){
+      card[name]=card[name]+1;
+   }else{
+      card[name]=1;
+   }
    // console.log(card);
    let cardConvetStr=JSON.stringify(card);
    localStorage.setItem('card',cardConvetStr);
