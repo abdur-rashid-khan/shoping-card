@@ -5,6 +5,9 @@ const clear=document.getElementById('clear');
 function add(){
    const input=document.getElementById('input');
    const name=input.value;
+   if(name===''){
+      return alert('tpying now ');
+   }
    // display in the ui
    displayData(name);
    // add to localstoreg
@@ -40,3 +43,12 @@ const  addProductsCard=name=>{
    let cardConvetStr=JSON.stringify(card);
    localStorage.setItem('card',cardConvetStr);
 }
+
+// show storage data
+const showData=()=>{
+   let totalProduct =getCard();
+   for(const productsName in totalProduct){
+      displayData(productsName);
+   }
+}
+showData();
