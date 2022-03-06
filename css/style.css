@@ -1,0 +1,11 @@
+.btn{
+   padding: 1rem .5rem ;
+   border: none;
+   color: green;
+}
+ul>li{
+   list-style: none;
+}
+ul{
+   padding: 0px;
+}
